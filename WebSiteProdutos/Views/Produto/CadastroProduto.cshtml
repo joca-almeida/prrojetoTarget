@@ -1,0 +1,39 @@
+﻿@using WebSiteProdutos.ViewModel
+@model ProdutoViewModel
+@{
+    ViewData["Title"] = "Cadastro de Produtos";
+}
+
+<h3>Mercado - Cadastro de Produtos</h3>
+
+@*Formulário para cadastro de produto*@
+<form class="col-5" asp-controller="Produto" asp-action="CadastroProduto" method="post">
+    <div class="form-group">
+        <label for="nome">Nome do produto</label>
+        <input type="text" class="form-control" placeholder="Exemplo: Morango" asp-for="NOME" required>
+        <span asp-validation-for="NOME" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="preco">Preço</label>
+        <input type="text" class="form-control" asp-for="PRECO" onkeyup="formataValor(this)">
+        <span asp-validation-for="PRECO" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="nome">Quantidade</label>
+        <input type="number" class="form-control" asp-for="QUANTIDADE">
+        <span asp-validation-for="QUANTIDADE" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Tipo</label>
+        <select class="form-control" id="exampleFormControlSelect1" asp-for="CODTIPO" required>
+            @foreach (var item in Model.TipoProdutos)
+            {
+                <option value="@item.CODTIPO">@item.TIPO</option>
+            }
+        </select>
+        <span asp-validation-for="CODTIPO" class="text-danger"></span>
+    </div>
+    <div>&nbsp;</div>
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+    <a class="btn btn-secondary align-content-end" role="button" asp-controller="Produto" asp-action="Index">Voltar</a>
+</form>

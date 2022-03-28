@@ -1,0 +1,18 @@
+﻿@using WebSiteProdutos.ViewModel
+@model ProdutoViewModel
+@{
+    ViewData["Title"] = "Cadastro Tipo de Produtos";
+}
+
+<h3>Mercado - Cadastro Tipo de Produtos</h3>
+
+@*Formulário para cadastro de produto*@
+<form class="col-5" asp-controller="Produto" asp-action="CadastroTipoProduto" method="post">
+    <div class="form-group">
+        <label for="tipo">Tipo</label>
+        <input type="text" class="form-control" placeholder="Exemplo: Bebidas" asp-for="TIPO" required>
+    </div>
+    <div>&nbsp;</div>
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+    <a class="btn btn-secondary align-content-end" role="button" asp-controller="Produto" asp-action="TipoProduto">Voltar</a>
+</form>
