@@ -1,0 +1,16 @@
+﻿################################################################################
+# Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
+################################################################################
+
+/WebSiteProdutos/obj/project.assets.json
+/WebSiteProdutos/obj/project.nuget.cache
+/WebSiteProdutos/obj/WebSiteProdutos.csproj.nuget.dgspec.json
+/WebSiteProdutos/obj/WebSiteProdutos.csproj.nuget.g.props
+/WebSiteProdutos/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+*.bin
+/WebSiteProdutos/obj/Debug/net6.0/WebSiteProdutos.AssemblyInfoInputs.cache
+/WebSiteProdutos/obj/Debug/net6.0/WebSiteProdutos.assets.cache
+/WebSiteProdutos/obj/Debug/net6.0/WebSiteProdutos.csproj.AssemblyReference.cache
+/WebSiteProdutos/obj/Debug/net6.0/WebSiteProdutos.GeneratedMSBuildEditorConfig.editorconfig
+/WebSiteProdutos/obj/Debug/net6.0/WebSiteProdutos.RazorAssemblyInfo.cache
+*.vsidx
